@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>lighten</title>
+      <title>Tienda Mia</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -124,90 +124,24 @@
          <div class="product-bg-white">
          <div class="container">
             <div class="row">
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p1.jpg" %}'/></i>
-                     <h3>Procesador AMD Ryzen 5 1400</h3>
-                     <span>$25.00</span>
+
+
+               {% if Productos %}
+               {% for produtco in Productos %}
+
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="product-box">
+                        <i><img src="{{produtco.imagen.url}}"/></i>
+                        <h3>{{produtco.nombre}}</h3>
+                        <span>S/{{produtco.precio}}</span>
+                        <a href> </a>
+                     </div>
                   </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p2.jpg" %}'></i>
-                     <h3>Procesador AMD Ryzen 7 1700X</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p3.jpg" %}'/></i>
-                     <h3>Procesador Intel Core i5 7ma Gen</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p4.jpg" %}'/></i>
-                     <h3>Procesador Intel Core i9 X-Series</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p5.jpg" %}'></i>
-                     <h3>Placa Madre ASUS PRIME H410M-E LGA 1200</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p6.jpg" %}'/></i>
-                     <h3>Tarjeta Nvidia GTX 1050</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p7.jpg" %}'/></i>
-                     <h3>Tarjeta Nvidia GTX 1650</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p4.jpg" %}'/></i>
-                     <h3>Procesador Intel Core i9 X-Series</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p7.jpg" %}'/></i>
-                     <h3>Tarjeta Nvidia GTX 1650</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p2.jpg" %}'></i>
-                     <h3>Procesador AMD Ryzen 7 1700X</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p5.jpg" %}'></i>
-                     <h3>Placa Madre ASUS PRIME H410M-E LGA 1200</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p3.jpg" %}'/></i>
-                     <h3>Procesador Intel Core i5 7ma Gen</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
+
+               {% endfor %}
+               {% endif %}
+
+
                </div>
             </div>
          </div>

@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from Tienda_mia.Aplicaciones.Tienda.models import Producto
 
 def Index(request): 
     return render(request, 'index.html')
@@ -13,8 +14,11 @@ def Blog(request):
 def Contacto(request):
     return render(request, 'contact.html')
 
-def Producto(request):
-    return render(request, 'product.html')
+def Productos(request):
+
+    productos = {'Productos': Producto.objects.all()}
+
+    return render(request, 'product.html',productos)
 
 def Login(request):
     return render(request, 'Login.html')
