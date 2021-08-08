@@ -1135,6 +1135,7 @@ nav.main-menu {
 	top: 100%;
 	border-end-end-radius: 8px;
 	border-end-start-radius: 8px;
+	box-shadow: #00000040 0px 0px 19px 0px;
 }
 
 .main-menu ul>li {
@@ -1933,7 +1934,7 @@ margin-top: 20px;
 	padding-top: 80px;
 	padding-bottom: 60px;
 }
- .product-bg .product-bg-white .product-box {
+.product-box {
  	background: rgb(255, 255, 255);
 	box-shadow: #00000040 0px 0px 19px 0px;
  	text-align: center;
@@ -1949,7 +1950,7 @@ margin-top: 20px;
  .product-bg .product-bg-white .product-box:hover {
 	animation: palpitar 1.5s linear infinite alternate;
 	will-change: transform;
- 	background: #fd4f4f;
+ 	background: #fc6868;
  }
  @keyframes palpitar {
 	0%{
@@ -2157,6 +2158,7 @@ ul.lik li a:hover {
 	background-color: #dc3545;
 	padding: 20px 0px;
 	margin-top: 70px;
+	border-radius: 8px;
 }
 
 .copyright p {
@@ -2208,7 +2210,7 @@ text-align: center;
 } 
 
 .form-control {
-     border: #ffc221 solid 2px;
+     border: #5f5f5f solid 2px;
      border-radius: inherit;
      margin-bottom: 30px;
      padding: 13px 20px;
@@ -2216,12 +2218,12 @@ text-align: center;
 }
 .form-control:focus {
      box-shadow: inherit;
-     border: #ffc221 solid 2px !important;
+     border: #ff4040 solid 2px !important;
 }
 
 .textarea {
      font-family: poppins;
-     border: #ffc221 solid 2px;
+     border: #ff4040 solid 2px;
      margin-bottom: 30px;
      padding: 13px 20px;
      width: 100%;
@@ -2406,3 +2408,9 @@ text-align: center;
 .carousel-caption{
 	left: 8% !important;
 }
+
+.col-12{
+	flex: 0 0 50% !important;
+	max-width: 100%;
+}
+

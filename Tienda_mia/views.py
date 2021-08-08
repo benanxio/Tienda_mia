@@ -22,3 +22,7 @@ def Productos(request):
 
 def Login(request):
     return render(request, 'Login.html')
+
+def DetallesProducto(request,id_producto):
+    producto_detalles = {'Productos': Producto.objects.get(id_producto=id_producto)}
+    return render(request,'product_details.html',producto_detalles)
