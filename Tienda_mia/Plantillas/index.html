@@ -20,7 +20,7 @@
       <!-- Responsive-->
       <link rel="stylesheet" href='{% static "css/responsive.css" %}'>
       <!-- fevicon -->
-      <link rel="icon" href='{% static "images/fevicon.png" %}' type="image/gif" />
+      <link rel="icon" href='{% static "icon/favicon_2019.ico" %}'/>
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href='{% static "css/jquery.mCustomScrollbar.min.css" %}'>
       <!-- Tweaks for older IEs-->
@@ -47,10 +47,10 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                        <div class="top-box">
                         <ul class="sociel_link">
-                         <li> <a href="https://www.facebook.com/tiendamiacompe/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                         <li> <a href="https://twitter.com/tiendamiacom/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                         <li> <a href="https://www.instagram.com/tiendamiacom/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
+                           <li> <a href="https://www.facebook.com/tiendamiacompe/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                           <li> <a href="https://twitter.com/tiendamiacom/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                           <li> <a href="https://www.instagram.com/tiendamiacom/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
                     </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -66,7 +66,7 @@
                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                   <div class="full">
                      <div class="center-desk">
-                        <div class="logo"> <a href="/Inicio/"><img src='{% static "images/logo.png" %}' alt="logo"/></a> </div>
+                        <div class="logo"> <a href="/"><img src='{% static "images/logo.png" %}' alt="logo"/></a> </div>
                      </div>
                   </div>
                </div>
@@ -75,11 +75,11 @@
                      <div class="limit-box">
                         <nav class="main-menu">
                            <ul class="menu-area-main">
-                              <li class="active"> <a href="/Inicio/">Inicio</a> </li>
+                              <li class="active"> <a href="/">Inicio</a> </li>
                               <li> <a href="/About/">Acerca</a> </li>
                               <li> <a href="/Producto/">Productos</a> </li>
                               <li> <a href="/Contacto/">Contacto</a> </li>
-                              <li class="mean-last"> <a href="/Contacto/">signup</a> </li>
+                              <li class="active"> <a href="/Carrito/">Carrito(0)</a> </li>
                                
                            </ul>
                         </nav>
@@ -102,8 +102,8 @@
                   <img class="first-slide" src='{% static "images/banner3.png" %}' alt="First slide">
                   <div class="container">
                      <div class="carousel-caption relative">
-                        <h1>Our <br> <strong class="black_bold">Latest </strong><br>
-                           <strong class="yellow_bold">Product </strong></h1>
+                        <h1>Los m&aacute;s <br> <strong class="black_bold">Recientes </strong><br>
+                           <strong class="yellow_bold">Productos </strong></h1>
                         <p>It is a long established fact that a r <br>
                           eader will be distracted by the readable content of a page </p>
                         <a  href="/Producto/">see more Products</a>
@@ -114,8 +114,8 @@
                   <img class="second-slide" src='{% static "images/banner2.png" %}' alt="Second slide">
                   <div class="container">
                      <div class="carousel-caption relative">
-                        <h1>Our <br> <strong class="black_bold">Latest </strong><br>
-                           <strong class="yellow_bold">Product </strong></h1>
+                        <h1>Los m&aacute;s <br> <strong class="black_bold">Recientes </strong><br>
+                           <strong class="yellow_bold">Productos </strong></h1>
                         <p>It is a long established fact that a r <br>
                           eader will be distracted by the readable content of a page </p>
                         <a  href="#">see more Products</a>
@@ -126,8 +126,8 @@
                   <img class="third-slide" src='{% static "images/banner1.png" %}' alt="Third slide">
                   <div class="container">
                      <div class="carousel-caption relative">
-                        <h1>Our <br> <strong class="black_bold">Latest </strong><br>
-                           <strong class="yellow_bold">Product </strong></h1>
+                        <h1>Los m&aacute;s <br> <strong class="black_bold">Recientes </strong><br>
+                           <strong class="yellow_bold">Productos </strong></h1>
                         <p>It is a long established fact that a r <br>
                           eader will be distracted by the readable content of a page </p>
                         <a  href="#">see more Products</a>
@@ -148,118 +148,79 @@
       </section>
 
 <!-- CHOOSE  -->
-      <div class="whyschose">
-         <div class="container">
+<div class="whyschose">
+   <div class="container">
 
-            <div class="row">
-               <div class="col-md-7 offset-md-3">
-                  <div class="title">
-                     <h2>¿Porqué <strong class="black">elegirnos?</strong></h2>
-                     <span>Los mejores componenetes al mejor precio!</span>
-                  </div>
-               </div>
+      <div class="row">
+         <div class="col-md-7 offset-md-3">
+            <div class="title">
+               <h2>¿Porqué <strong class="black">elegirnos?</strong></h2>
+               <span>Te damos a conocer las mejores ofertas de las tiendas online del momento. Dandote la confianza de realizar tus pedidos con la mayor comodidad posible.</span>
             </div>
          </div>
       </div>
-      <div class="choose_bg">
-         <div class="container">
-            <div class="white_bg">
-            <div class="row">
-               <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src='{% static "icon/1.png" %}'/></i>
-                     <h3>Data recovery</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </dir>
-               <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src='{% static "icon/2.png" %}'/></i>
-                     <h3>Computer repair</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </dir>
-               <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src='{% static "icon/3.png" %}'/></i>
-                     <h3>Mobile service</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </dir>
-               <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src='{% static "icon/4.png" %}'/></i>
-                     <h3>Network solutions</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </dir>
-               <div class="col-md-12">
-                  <a class="read-more">Read More</a>
-               </div>
-            </div>
-         </div>
-       </div>
-      </div>
+   </div>
+</div>
 <!-- end CHOOSE -->
 
-      <!-- service --> 
-      <div class="service">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-8 offset-md-2">
-                  <div class="title">
-                     <h2>Service <strong class="black">Process</strong></h2>
-                     <span>Easy and effective way to get your device repair</span>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src='{%static "icon/service1.png"%}'/></i>
-                     <h3>Fast service</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src='{%static "icon/service2.png"%}'/></i>
-                     <h3>Secure payments</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src='{%static "icon/service3.png"%}'/></i>
-                     <h3>Expert team</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src='{%static "icon/service4.png"%}'></i>
-                     <h3>Affordable services</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src='{%static "icon/service5.png"%}'/></i>
-                     <h3>90 Days warranty</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src='{%static "icon/service6.png"%}'/></i>
-                     <h3>Award winning</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
+<!-- service --> 
+<div class="service">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8 offset-md-2">
+            <div class="title">
+               <h2>Proceso <strong class="black">de Servicio</strong></h2>
+               <span>La manera más facil y eficaz de realizar tus pedidos!</span>
             </div>
          </div>
       </div>
-      <!-- end service -->
+      <div class="row">
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="service-box">
+               <i><img src={%static 'icon/service1.png'%}/></i>
+               <h3>Servicio rápido</h3>
+               <p>Te damos a conocer las ofertas y tus pedidos lo más rapido posble.</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="service-box">
+               <i><img src='{%static "icon/service2.png"%}'/></i>
+               <h3>Métodos de Pago Seguros</h3>
+               <p>Mantenemos seguros tus métodos de pago.</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="service-box">
+               <i><img src='{%static "icon/service3.png"%}'/></i>
+               <h3>Equipo Experto</h3>
+               <p>Nos de dicamos a brindar el mejor servicio a nuestros clientes.</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="service-box">
+               <i><img src='{%static "icon/service4.png"%}'/></i>
+               <h3>Servicio Rentable</h3>
+               <p>Variedad de ofertas, a la comodidad de tu bolsillo</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="service-box">
+               <i><img src='{%static "icon/service5.png"%}'/></i>
+               <h3>Garantia de 90 días</h3>
+               <p>Garantia de 90 dias en caso tuviera incovenientes.</p>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="service-box">
+               <i><img src='{%static "icon/service6.png"%}'/></i>
+               <h3>Reconocimiento</h3>
+               <p>Reconocido como una de las mejores páginas de compra online.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end service -->
 
       <!-- our product -->
       <div class="product">
@@ -268,7 +229,7 @@
                <div class="col-md-12">
                   <div class="title">
                      <h2>Nuestros <strong class="black">Productos</strong></h2>
-                     <span>We package the products with best services to make you a happy customer.</span>
+                     <span>Empaquetamos los productos con los mejores servicios para que sea un cliente feliz.</span>
                   </div>
                </div>
             </div>
@@ -278,63 +239,22 @@
          <div class="product-bg-white">
          <div class="container">
             <div class="row">
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p1.jpg" %}'/></i>
-                     <h3>Procesador AMD Ryzen 5 1400</h3>
-                     <span>$25.00</span>
+
+               {% if Productos %}
+               {% for producto in Productos %}
+
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="product-box">
+                        <i><img src="{{producto.imagen.url}}"/></i>
+                        <h3>{{producto.nombre}}</h3>
+                        <span>S/{{producto.precio}}</span>
+                        <a href="/{{producto.id_producto}}" class="btn btn-block btn-danger">Ver Producto</a>
+                     </div>
                   </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p2.jpg" %}'></i>
-                     <h3>Procesador AMD Ryzen 7 1700X</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p3.jpg" %}'/></i>
-                     <h3>Procesador Intel Core i5 7ma Gen</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p4.jpg" %}'/></i>
-                     <h3>Procesador Intel Core i9 X-Series</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p5.jpg" %}'></i>
-                     <h3>Placa Madre ASUS PRIME H410M-E LGA 1200</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p6.jpg" %}'/></i>
-                     <h3>Tarjeta Nvidia GTX 1050</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p7.jpg" %}'/></i>
-                     <h3>Tarjeta Nvidia GTX 1650</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="product-box">
-                     <i><img src='{%static "icon/p7.jpg" %}'/></i>
-                     <h3>Tarjeta Nvidia GTX 1650</h3>
-                     <span>$25.00</span>
-                  </div>
-               </div>
-               </div>
+
+               {% endfor %}
+               {% endif %}
+
             </div>
          </div>
          <div class="Clients_bg_white">

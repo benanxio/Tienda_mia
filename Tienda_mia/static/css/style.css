@@ -33,7 +33,7 @@
 ---------------------------------------------------------------------*/
 
 * {
-	box-sizing: border-box !important;
+	box-sizing: border-box;
 }
 
 html {
@@ -1649,7 +1649,6 @@ input[type="radio"] .styled:checked+label::after {
 .buy {
 	background: #ff5353;
 	padding: 7px 41px !important;
-	margin-top: 18px;
 	border-radius: 5px;
 	display: inline-block;
 	float: right;
@@ -1856,6 +1855,7 @@ font-size: 18px;
     margin-bottom: 30px;
     text-align: center;
 	border-radius: 8px;
+	height: 95%;
 }
 
 .service .service-box i img {
@@ -2414,3 +2414,6 @@ text-align: center;
 	max-width: 100%;
 }
 
+.swal-button{
+	background: #ff3a3a !important;
+}

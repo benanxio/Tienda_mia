@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from .db import *
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,7 +75,9 @@ WSGI_APPLICATION = 'Tienda_mia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+from .db import *
 DATABASES = sqlserver
+
 DATABASE_CONNECTION_POOLING = False
 
 # Password validation

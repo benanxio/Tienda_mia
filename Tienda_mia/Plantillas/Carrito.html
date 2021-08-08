@@ -79,9 +79,9 @@
                            <ul class="menu-area-main">
                               <li> <a href="/">Inicio</a> </li>
                               <li> <a href="/About/">Acerca</a> </li>
-                              <li  class="active"> <a href="/Producto/">Productos</a> </li>
-                              <li> <a href="/Contacto/">Contacto</a> </li>
-                              <li > <a id="Carrito" href="/Carrito/">Carrito(0)</a> </li>
+                              <li > <a href="/Producto/">Productos</a> </li>
+                              <li > <a href="/Contacto/">Contacto</a> </li>
+                              <li class="active"> <a href="/Carrito/">Carrito(0)</a> </li>
                                
                            </ul>
                         </nav>
@@ -95,33 +95,6 @@
          </div>
          <!-- end header inner --> 
       </header>
-    <!--Card de Producto-->
-   <div class="container">
-       <div class="card">
-           <div class=container-fluid>
-                <div class="wrapper row">
-                    <div class="col-md-6">
-                        <i><img src="{{Productos.imagen.url}}" /></i>
-                    </div>
-                    <div class="right-column col-md-6" style="padding-top:5%">
-                        <div class="product-description">
-                            <h1 style="font-weight:bolder">{{Productos.id_fabricante.nombre}}&nbsp;{{Productos.nombre}}</h1>
-                            <h2><strong>Descripci&oacute;n</strong></h2>
-                            <li>Categor&iacute;a: {{Productos.id_categoria.nombre}}</li>
-                            <li class="pt-1">
-                                {{Productos.descripcion|linebreaks}}                                
-                            </li>
-                            <hr>
-                            <div class="product-price">
-                                <h2>S/{{Productos.precio}}</h2>
-                            </div>
-                            <button value="{{Productos.nombre}}" id="{{Productos.id_producto}}" class="btn atc btn-block btn-danger">Añadir al Carrito</button>
-                        </div>
-                    </div>                    
-                </div>
-           </div>
-       </div>
-   </div>
     <!--Fin de DetallesProducto-->
     <!--Footer-->
     <footr>
@@ -148,39 +121,6 @@
      <script src='{% static "js/bootstrap.bundle.min.js" %}'></script> 
      <script src='{% static "js/jquery-3.0.0.min.js" %}'></script> 
      <script src='{% static "js/plugin.js" %}'></script> 
-
-      <!--Carrito-->
-     <script type ="text/javascript">
-         localstorage= window.localStorage;
-
-         if(localstorage.getItem('cart')==null){
-            var cart = {};
-         }else{
-            cart = JSON.parse(localstorage.getItem('cart'));
-         }
-         
-         $(document).on('click','.atc', function(){
-            swal({
-               position: 'top-end',
-               icon: 'success',
-               title: this.value.toString()+' Agregado correctamente',
-               showConfirmButton: false,
-               timer: 3550
-            });
-            var item_product = this.id.toString();
-
-            if(cart[item_product] != undefined){
-               cart[item_product] = cart[item_product] + 1;
-            }
-            else{
-               cart[item_product] = 1;
-            }
-         
-            localstorage.setItem('cart',JSON.stringify(cart));
-            console.log(Object.keys(cart).length);
-            document.getElementById("Carrito").innerHTML = "Carrito(" + Object.keys(cart).length + ")";
-
-         });
 
       </script>
       <!--Fin de Carrito-->

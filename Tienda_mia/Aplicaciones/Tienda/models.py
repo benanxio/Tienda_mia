@@ -38,6 +38,10 @@ class Clientes(models.Model):
     sexo = models.CharField(db_column='Sexo', max_length=1)  # Field name made lowercase.
     fecha = models.DateField(auto_now_add=True,db_column='Fecha')  # Field name made lowercase. This field type is a guess.
 
+    def __str__(self):
+        txt = "[{0}] {1}"
+        return txt.format(self.id_cliente,self.nombre)
+
     class Meta:
         managed = False
         db_table = 'CLIENTES'
@@ -53,7 +57,7 @@ class Empleados(models.Model):
     password = models.CharField(db_column='Password', max_length=15)  # Field name made lowercase.
     dni = models.CharField(db_column='DNI', max_length=8)  # Field name made lowercase.
     sexo = models.CharField(db_column='Sexo', max_length=1)  # Field name made lowercase.
-    fecha = models.TextField(db_column='Fecha')  # Field name made lowercase. This field type is a guess.
+    fecha = models.DateField(auto_now_add=True,db_column='Fecha')  # Field name made lowercase. This field type is a guess.
 
     class Meta:
         managed = False
@@ -123,8 +127,13 @@ class Producto(models.Model):
 
 
 class Ubicacion(models.Model):
+    id_ub = models.AutoField(db_column='id', primary_key=True)
     departamento = models.CharField(db_column='Departamento', max_length=30)  # Field name made lowercase.
-    ciudad = models.CharField(db_column='Ciudad', max_length=30)  # Field name made lowercase.
+    ciudad = models.CharField(db_column='Provincia', max_length=30)  # Field name made lowercase.
+
+    def __str__(self):
+        txt = "[{0}] {1}"
+        return txt.format(self.departamento,self.ciudad)
 
     class Meta:
         managed = False
@@ -135,8 +144,9 @@ class Venta(models.Model):
     id_venta = models.AutoField(primary_key=True)
     id_cliente = models.ForeignKey(Clientes, models.DO_NOTHING, db_column='id_cliente', blank=True, null=True)
     total = models.CharField(db_column='Total', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    fecha_venta = models.DateField(db_column='FECHA_VENTA')  # Field name made lowercase. This field type is a guess.
+    fecha_venta = models.DateField(auto_now_add=True,db_column='FECHA_VENTA')  # Field name made lowercase. This field type is a guess.
     direccion = models.CharField(db_column='Direccion', max_length=150, blank=True, null=True)  # Field name made lowercase.
+    id_mpago = models.ForeignKey(MetodoPago, models.DO_NOTHING, db_column='id_mpago')
 
     class Meta:
         managed = False
@@ -153,16 +163,3 @@ class DetalleVenta(models.Model):
     class Meta:
         managed = False
         db_table = 'DETALLE_VENTA'
-
-
-class Sysdiagrams(models.Model):
-    name = models.CharField(max_length=128)
-    principal_id = models.IntegerField()
-    diagram_id = models.AutoField(primary_key=True)
-    version = models.IntegerField(blank=True, null=True)
-    definition = models.BinaryField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'sysdiagrams'
-        unique_together = (('principal_id', 'name'),)
