@@ -47,7 +47,7 @@ def contactar(request):
         mensaje = request.POST["Mensaje"]
         mensajeT = "Hola!! Soy "+nombre+"\n-Mi correo es: "+correo+"\n-Mi numero es "+telefono+"\n\nMENSAJE\n\n"+mensaje
         email_desde = settings.EMAIL_HOST_USER
-        email_para = ["esaubeca@gmail.com"]
+        email_para = ["benanxio@gmail.com"]
         send_mail("Quiero más información", mensajeT, email_desde, email_para, fail_silently=False)
         productos = Producto.objects.all()
         return render(request, 'product.html',{'Productos': productos})
