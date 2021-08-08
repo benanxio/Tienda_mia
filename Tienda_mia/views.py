@@ -1,5 +1,7 @@
 from django.db.models import query
 from django.http import HttpResponse
+from django.conf import settings
+from django.core.mail import send_mail
 from django.shortcuts import render
 from Tienda_mia.Aplicaciones.Tienda.models import Producto
 
@@ -36,3 +38,18 @@ def DetallesProducto(request,id_producto):
 
 def Carrito_c(request):
     return render(request,'Carrito.html')
+
+def contactar(request):
+    if request.method == "POST":
+        nombre = request.POST["Nombre"]
+        correo = request.POST["Email"]
+        telefono = request.POST["Phone"]
+        mensaje = request.POST["Mensaje"]
+        mensajeT = "Hola!! Soy "+nombre+"\n-Mi correo es: "+correo+"\n-Mi numero es "+telefono+"\n\nMENSAJE\n\n"+mensaje
+        email_desde = settings.EMAIL_HOST_USER
+        email_para = ["esaubeca@gmail.com"]
+        send_mail("Quiero más información", mensajeT, email_desde, email_para, fail_silently=False)
+        productos = Producto.objects.all()
+        return render(request, 'product.html',{'Productos': productos})
+    
+    return render(request, "contact.html")

@@ -5,7 +5,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from Tienda_mia.views import Index, Login,Productos,About,Blog,Contacto, DetallesProducto,Carrito_c
+from Tienda_mia.views import Index, Login,Productos,About,Blog,Contacto, DetallesProducto,Carrito_c,contactar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,7 +16,8 @@ urlpatterns = [
     path('Contacto/',Contacto),
     path('Login/',Login),
     path('<int:id_producto>/',DetallesProducto),
-    path("Carrito/", Carrito_c)
+    path("Carrito/", Carrito_c),
+    path("Contactar/", contactar)
 ]
 
 
