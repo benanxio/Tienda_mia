@@ -18,6 +18,7 @@ urlpatterns = [
     path('<int:id_producto>/',DetallesProducto),
     path("Carrito/", Carrito_c),
     path("Contactar/", contactar)
+    
 ]
 
 
